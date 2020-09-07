@@ -21,7 +21,7 @@ pipeline {
         echo "deploymnt get start"
         sh '/usr/local/bin/kubectl create namespce block | echo "already created "'
         sh '/usr/local/bin/kubectl apply -f deployment-block.yaml'
-        sh '/usr/local/bin/kubectl  apply -f block-svc | echo "already svc exit"'
+        sh '/usr/local/bin/kubectl  apply -f block-svc.yaml | echo "already svc exit"'
         sh '/usr/local/bin/kubectl get pod -n block && /usr/local/bin/kubectl get svc -n block '
         echo " deployment completed"
       }
