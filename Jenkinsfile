@@ -26,9 +26,9 @@ pipeline {
         echo " deployment completed"
       }
     }
-    stage('IPerformance Test') {
+    stage('BDD Test') {
       steps {
-        echo "performace test"
+        sh 'behave -f pretty ./Tests/features/feature/student_positive.feature'
       }
     }
 
