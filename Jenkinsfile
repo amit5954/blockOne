@@ -4,7 +4,7 @@ pipeline {
     stage('unit-testing') {
       steps {
         sh 'env'
-        sh 'pip install -r requirements.txt'
+        sh '/opt/anaconda3/bin/pip install -r requirements.txt'
         sh 'python test.py'
       }
     }
