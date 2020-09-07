@@ -8,6 +8,23 @@ pipeline {
         sh '/opt/anaconda3/bin/python test.py'
       }
     }
+    stage('build & Push') {
+      steps {
+        echo "docker build -t rohtash.kumar/block ."
+      }
+    }
+
+    stage('deployment') {
+      steps {
+        echo "deploymnt "
+        //sh 'kubectl apply -f deployment.yaml'
+      }
+    }
+    stage('IPerformance Test') {
+      steps {
+        echo "performace test"
+      }
+    }
 
   }
 }
