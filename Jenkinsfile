@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('unit-testing') {
       steps {
-        sh 'python3 test.py'
+        sh 'env'
+        sh 'python test.py'
       }
     }
 
