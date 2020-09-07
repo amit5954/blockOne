@@ -10,8 +10,8 @@ pipeline {
     }
     stage('build & Push') {
       steps {
-        sh 'docker build -t rohtashkumar/block .'
-        sh ' docker images | grep rohtashkumar '
+        sh '/usr/local/bin/dockerker build -t rohtashkumar/block .'
+        sh ' /usr/local/bin/docker images | grep rohtashkumar '
       }
     }
 
